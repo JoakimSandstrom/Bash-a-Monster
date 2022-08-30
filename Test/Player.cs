@@ -26,7 +26,17 @@ public class Player
         name = "Commando";
         hp = 100;
         damage = 10;
-
+        moveSpd = 10;
+        attackSpd = 10;
+    }
+    public void Loader()
+    {
+        name = "Loader";
+        hp = 150;
+        damage = 15;
+        armor = 20;
+        moveSpd = 8;
+        attackSpd = 5;
     }
 }
 

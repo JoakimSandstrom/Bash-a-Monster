@@ -10,7 +10,7 @@ public class Vagrant
         public float ry;
         public float rz;
     // Stats
-        public int hp = 1500;
+        public int hp = 1000;
         public float damage;
         public float armor;
         public float moveSpd;
