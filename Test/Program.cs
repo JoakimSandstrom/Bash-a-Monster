@@ -1,36 +1,40 @@
 ﻿Player p1 = new Player();
-p1.name = "Rat";
-Player p2 = new Player();
-p2.name = "JoeShmoe";
 
-p1.Commando();
-p2.Loader();
-Console.WriteLine(p1.name+" Has spawned");
-Console.WriteLine(p2.name+" Has spawned");
+Console.WriteLine("Welcome To My Stupid Game!");
+Console.WriteLine("");
+Console.WriteLine("Choose Your Name:");
+p1.name = Console.ReadLine();
+Console.WriteLine("Choose Your Class: 1.Commando | 2.Loader");
+if (Console.ReadLine() == "1")
+{
+    p1.Commando();
+}
+else if (Console.ReadLine() == "2")
+{
+    p1.Loader();
+}
+else
+{
+    return;
+}
 
-Wisp w1 = new Wisp();
-Wisp w2 = new Wisp();
-Console.WriteLine(w1.name+" Has spawned");
-Console.WriteLine(w2.name+" Has spawned");
+Console.WriteLine("Starting...");
 
-w1.hp -= 10;
-w2.hp -= 30;
+Console.WriteLine(p1.name+" Has Spawned");
 
-Vagrant wv1 = new Vagrant();
-Console.WriteLine(wv1.name+" Has spawned");
 
-w2.hp -= 20;
-w1.hp -= 40;
-wv1.hp -= 500;
-Console.WriteLine(w1.name+" Was Defeated");
-Console.WriteLine(w2.name+" Was Defeated");
-
-p1.hp -= 100;
-p2.hp -= 200;
-
-Console.WriteLine(p1.name+" Has Died");
-Console.WriteLine(p2.name+" Has Died");
-Console.WriteLine("Game Over!");
-
+Console.WriteLine("Start the Teleporter Event?(y/n)");
+if (Console.ReadLine() == "y")
+{
+    Vagrant wv1 = new Vagrant();
+    Console.WriteLine(wv1.name+" Has Spawned");
+    Console.WriteLine("The Boss One Shots You...");
+    Console.WriteLine("Game Over!");
+}
+else
+{
+    Console.WriteLine("You Stand Around Doing Nothing. You Eventualy die.");
+    Console.WriteLine("Game Over!");
+}
 
 Console.ReadLine();
